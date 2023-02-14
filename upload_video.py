@@ -88,9 +88,13 @@ def initialize_upload(youtube, options):
 
   body=dict(
     snippet=dict(
-      title=options.title,
-      description=options.description,
-      tags=tags,
+      # title=options.title,
+      # description=options.description,
+      # tags=tags,
+      # categoryId=options.category
+      title="Dinujaya Sandaruwan",
+      description="Like comment Subacribe",
+      tags="test,saman",
       categoryId=options.category
     ),
     status=dict(
@@ -130,12 +134,12 @@ def resumable_upload(insert_request):
       status, response = insert_request.next_chunk()
       if response is not None:
         if 'id' in response:
-          print ("Video id '%s' was successfully uploaded.") % response['id']
+          print ("Video id '%s' was successfully uploaded.") , response['id']
         else:
-          exit("The upload failed with an unexpected response: %s" % response)
+          exit("The upload failed with an unexpected response: %s" , response)
     except HttpError as e:
       if e.resp.status in RETRIABLE_STATUS_CODES:
-        error = "A retriable HTTP error %d occurred:\n%s" % (e.resp.status,
+        error = "A retriable HTTP error %d occurred:\n%s" , (e.resp.status,
                                                              e.content)
       else:
         raise
