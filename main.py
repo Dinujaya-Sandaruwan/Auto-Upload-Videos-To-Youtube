@@ -64,14 +64,10 @@ for item in response["items"]:
     ).execute()
 
     # Extract the title, description, tags, and thumbnail URL from the video response
-    # video_title = video_response["items"][0]["snippet"]["title"]
-    # video_desc = video_response["items"][0]["snippet"]["description"]
-    # video_tags = video_response["items"][0]["snippet"]["tags"]
-    # video_thumbnail = video_response["items"][0]["snippet"]["thumbnails"]["high"]["url"]
-    video_title = "Dinujaya Sandaruwan"
-    video_desc = "Dinujaya Sandaruwan"
-    video_tags =[]
-    # video_thumbnail = "Dinujaya Sandaruwan"
+    video_title = video_response["items"][0]["snippet"]["title"]
+    video_desc = video_response["items"][0]["snippet"]["description"]
+    video_tags = video_response["items"][0]["snippet"]["tags"]
+    video_thumbnail = video_response["items"][0]["snippet"]["thumbnails"]["high"]["url"]
 
 
 
@@ -91,7 +87,7 @@ for item in response["items"]:
         "tags" : video_tags,
         "categoryId" : "22",
         "privacyStatus" : "unlisted", # Video privacy. Can either be "public", "private", or "unlisted"
-        # "thumbnail_path" : video_thumbnail, # Path to the thumbnail image file
+        "thumbnail_path" : video_thumbnail, # Path to the thumbnail image file
         "kids" : False, # Specifies if the Video if for kids or not. Defaults to False.
     }
 
