@@ -26,7 +26,7 @@ request = youtube.search().list(
     part="id,snippet",
     q=keyword,
     type="video",
-    maxResults=2,
+    maxResults=5,
     videoDefinition="high",
     videoLicense="creativeCommon",
 )
