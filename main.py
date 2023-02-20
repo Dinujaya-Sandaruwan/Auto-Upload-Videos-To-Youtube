@@ -52,7 +52,7 @@ for item in response["items"]:
     # GET INFORMATIONS
     
     # Set the API key
-    api_key = "AIzaSyDX76Sk7nnMbEh9zXYumt-Q8_qhPXpbIFQ"
+    api_key = "AIzaSyCY1mqgnbJXRwDoGw2JYWNy0jZoyy6JWRQ"
 
     # Authenticate the API request using the API key
     youtube = build("youtube", "v3", developerKey=api_key)
@@ -75,8 +75,8 @@ for item in response["items"]:
 
     # UPLOAD TO THE YOUTUBE
 
-    client_id = "80299086960-7s0vkuefkcd77cur1kf7nj7j4b2ikm5g.apps.googleusercontent.com"
-    client_secret = "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"
+    client_id = "232101416181-e24sdd6p2pkkinhavid49sq9gchnslon.apps.googleusercontent.com"
+    client_secret = "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"
 
 
 
